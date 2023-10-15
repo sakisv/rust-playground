@@ -52,6 +52,26 @@ fn main() {
 
     let sd = SecondDegree::new(a, b, c);
 
-    println!("D = {:?}", sd.d);
+    println!("Positive D = {:?}", sd.d);
+    println!("Roots = {:?}", sd.get_roots());
+
+    println!("====================");
+
+    let (a, b, c) = (-3, 6, -3);
+    println!("A={a}, B={b}, C={c}");
+
+    let sd = SecondDegree::new(a, b, c);
+
+    println!("Zero D = {:?}", sd.d);
+    println!("Roots = {:?}", sd.get_roots());
+
+    println!("====================");
+
+    let (a, b, c) = (4, 12, 10);
+    println!("A={a}, B={b}, C={c}");
+
+    let sd = SecondDegree::new(a, b, c);
+
+    println!("Negative D = {:?}", sd.d);
     println!("Roots = {:?}", sd.get_roots());
 }
