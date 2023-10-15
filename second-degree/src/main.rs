@@ -35,8 +35,8 @@ impl SecondDegree {
     fn new(a: i32, b: i32, c: i32) -> Self {
         let d = b * b - 4 * a * c;
         match d {
-            d if d.is_positive() =>  SecondDegree{a, b, c, d: DType::DPositive(d)},
-            d if d.is_negative() =>  SecondDegree{a, b, c, d: DType::DNegative(d)},
+            x if d.is_positive() =>  SecondDegree{a, b, c, d: DType::DPositive(x)},
+            y if d.is_negative() =>  SecondDegree{a, b, c, d: DType::DNegative(y)},
             _ =>  SecondDegree{a, b, c, d: DType::DZero(d)},
         }
     }
